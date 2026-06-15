@@ -19,6 +19,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="business.business">
 <meta property="og:locale" content="th_TH">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="ตั้งใจทำบัญชี">
 <meta property="og:title" content="รับทำบัญชีเชียงใหม่ | ตั้งใจทำบัญชี สำนักงานบัญชีครบวงจร">
 <meta property="og:description" content="รับทำบัญชีเชียงใหม่ครบวงจร จดทะเบียนบริษัท ทำบัญชี ปิดงบ ยื่นภาษี นำทีมโดยผู้สอบบัญชีภาษีอากร (TA) ยื่นตรงเวลา 100% ปรึกษาฟรี">
@@ -107,7 +108,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -120,20 +121,24 @@
         <img src="assets/logo-light.png" alt="ตั้งใจทำบัญชี">
       </a>
       <div class="nav-links">
-        <a href="#services">บริการ</a>
-        <a href="#why">ทำไมต้องเรา</a>
-        <a href="#credentials">ใบอนุญาต</a>
-        <a href="#process">ขั้นตอน</a>
-        <a href="#pricing">แพ็กเกจ</a>
-        <a href="#faq">คำถามที่พบบ่อย</a>
-        <a href="#contact">ติดต่อ</a>
+        <a href="#services" data-i18n="nav.services">บริการ</a>
+        <a href="#why" data-i18n="nav.why">ทำไมต้องเรา</a>
+        <a href="#credentials" data-i18n="nav.credentials">ใบอนุญาต</a>
+        <a href="#process" data-i18n="nav.process">ขั้นตอน</a>
+        <a href="#pricing" data-i18n="nav.pricing">แพ็กเกจ</a>
+        <a href="#faq" data-i18n="nav.faq">คำถามที่พบบ่อย</a>
+        <a href="#contact" data-i18n="nav.contact">ติดต่อ</a>
       </div>
       <div class="nav-cta">
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="เลือกภาษา / Language">
+          <button type="button" data-lang="th">TH</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
         <span class="nav-phone">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           02-123-4567
         </span>
-        <a href="#contact" class="btn btn-primary">ปรึกษาฟรี</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">ปรึกษาฟรี</a>
       </div>
       <button class="menu-toggle" id="menuToggle" aria-label="เปิดเมนู">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -152,14 +157,18 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <a class="link" href="#services" data-close>บริการ</a>
-    <a class="link" href="#why" data-close>ทำไมต้องเรา</a>
-    <a class="link" href="#credentials" data-close>ใบอนุญาต</a>
-    <a class="link" href="#process" data-close>ขั้นตอน</a>
-    <a class="link" href="#pricing" data-close>แพ็กเกจ</a>
-    <a class="link" href="#faq" data-close>คำถามที่พบบ่อย</a>
-    <a class="link" href="#contact" data-close>ติดต่อ</a>
-    <a href="#contact" class="btn btn-primary btn-block" data-close>ปรึกษาฟรี ไม่มีค่าใช้จ่าย</a>
+    <a class="link" href="#services" data-close data-i18n="nav.services">บริการ</a>
+    <a class="link" href="#why" data-close data-i18n="nav.why">ทำไมต้องเรา</a>
+    <a class="link" href="#credentials" data-close data-i18n="nav.credentials">ใบอนุญาต</a>
+    <a class="link" href="#process" data-close data-i18n="nav.process">ขั้นตอน</a>
+    <a class="link" href="#pricing" data-close data-i18n="nav.pricing">แพ็กเกจ</a>
+    <a class="link" href="#faq" data-close data-i18n="nav.faq">คำถามที่พบบ่อย</a>
+    <a class="link" href="#contact" data-close data-i18n="nav.contact">ติดต่อ</a>
+    <a href="#contact" class="btn btn-primary btn-block" data-close data-i18n="drawer.cta">ปรึกษาฟรี ไม่มีค่าใช้จ่าย</a>
+    <div class="lang-switch" id="langSwitchDrawer" role="group" aria-label="เลือกภาษา / Language">
+      <button type="button" data-lang="th">TH</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
   </div>
 </div>
 
@@ -167,68 +176,68 @@
 <section class="hero" id="home">
   <div class="wrap">
     <div class="hero-copy reveal">
-      <span class="eyebrow"><span class="dot"></span> สำนักงานบัญชีเชียงใหม่ — ดูแลธุรกิจ SME</span>
-      <h1>รับทำบัญชีเชียงใหม่<br>บัญชี–ภาษี <span class="hl">ครบจบในที่เดียว</span><br>ด้วยความตั้งใจในทุกตัวเลข</h1>
-      <p class="lede">สำนักงานบัญชีในเชียงใหม่ ดูแลตั้งแต่จดทะเบียนบริษัท ทำบัญชีรายเดือน ปิดงบประจำปี จนถึงยื่นภาษี ครบวงจรในที่เดียว ให้คุณโฟกัสกับการเติบโตของธุรกิจได้เต็มที่</p>
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="hero.eyebrow">สำนักงานบัญชีเชียงใหม่ — ดูแลธุรกิจ SME</span></span>
+      <h1 data-i18n="hero.h1">รับทำบัญชีเชียงใหม่<br>บัญชี–ภาษี <span class="hl">ครบจบในที่เดียว</span><br>ด้วยความตั้งใจในทุกตัวเลข</h1>
+      <p class="lede" data-i18n="hero.lede">สำนักงานบัญชีในเชียงใหม่ ดูแลตั้งแต่จดทะเบียนบริษัท ทำบัญชีรายเดือน ปิดงบประจำปี จนถึงยื่นภาษี ครบวงจรในที่เดียว ให้คุณโฟกัสกับการเติบโตของธุรกิจได้เต็มที่</p>
       <div class="cta-row">
         <a href="#contact" class="btn btn-primary">
-          ปรึกษาฟรี ไม่มีค่าใช้จ่าย
+          <span data-i18n="hero.cta1">ปรึกษาฟรี ไม่มีค่าใช้จ่าย</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="#pricing" class="btn btn-ghost">ดูแพ็กเกจราคา</a>
+        <a href="#pricing" class="btn btn-ghost" data-i18n="hero.cta2">ดูแพ็กเกจราคา</a>
       </div>
       <div class="reassure">
-        <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> นักบัญชีขึ้นทะเบียน CPD</span>
-        <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ยื่นภาษีตรงเวลา 100%</span>
-        <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ราคาชัดเจน ไม่บวกเพิ่ม</span>
+        <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="hero.reassure1">นักบัญชีขึ้นทะเบียน CPD</span></span>
+        <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="hero.reassure2">ยื่นภาษีตรงเวลา 100%</span></span>
+        <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="hero.reassure3">ราคาชัดเจน ไม่บวกเพิ่ม</span></span>
       </div>
     </div>
 
     <div class="hero-visual reveal d2">
       <div class="mock">
         <div class="mock-top">
-          <span class="t">เช็กลิสต์งานภาษีเดือนนี้</span>
-          <span class="pill">มิถุนายน 2569</span>
+          <span class="t" data-i18n="mock.title">เช็กลิสต์งานภาษีเดือนนี้</span>
+          <span class="pill" data-i18n="mock.pill">มิถุนายน 2569</span>
         </div>
         <div class="mp">
-          <div class="mp-head"><span class="lbl">ความคืบหน้างานเดือนนี้</span><span class="pct">4 / 5 เสร็จ</span></div>
+          <div class="mp-head"><span class="lbl" data-i18n="mock.progress.lbl">ความคืบหน้างานเดือนนี้</span><span class="pct" data-i18n="mock.progress.pct">4 / 5 เสร็จ</span></div>
           <div class="mp-bar"><div class="mp-fill" id="mpFill" style="width:80%"></div></div>
         </div>
         <div class="tasklist">
           <div class="task">
-            <span class="t-date">ภายใน 7</span>
-            <span class="t-name">ภ.ง.ด.1, 3, 53 — หัก ณ ที่จ่าย</span>
-            <span class="t-status ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ยื่นแล้ว</span>
+            <span class="t-date" data-i18n="task1.date">ภายใน 7</span>
+            <span class="t-name" data-i18n="task1.name">ภ.ง.ด.1, 3, 53 — หัก ณ ที่จ่าย</span>
+            <span class="t-status ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="task1.status">ยื่นแล้ว</span></span>
           </div>
           <div class="task">
-            <span class="t-date">ภายใน 15</span>
-            <span class="t-name">เงินสมทบประกันสังคม</span>
-            <span class="t-status ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ยื่นแล้ว</span>
+            <span class="t-date" data-i18n="task2.date">ภายใน 15</span>
+            <span class="t-name" data-i18n="task2.name">เงินสมทบประกันสังคม</span>
+            <span class="t-status ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="task2.status">ยื่นแล้ว</span></span>
           </div>
           <div class="task">
-            <span class="t-date">ภายใน 15</span>
-            <span class="t-name">ภ.พ.30 — ภาษีมูลค่าเพิ่ม (VAT)</span>
-            <span class="t-status ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ยื่นแล้ว</span>
+            <span class="t-date" data-i18n="task3.date">ภายใน 15</span>
+            <span class="t-name" data-i18n="task3.name">ภ.พ.30 — ภาษีมูลค่าเพิ่ม (VAT)</span>
+            <span class="t-status ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="task3.status">ยื่นแล้ว</span></span>
           </div>
           <div class="task">
-            <span class="t-date">ภายใน 20</span>
-            <span class="t-name">สรุปรายงานผู้บริหารรายเดือน</span>
-            <span class="t-status ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ส่งแล้ว</span>
+            <span class="t-date" data-i18n="task4.date">ภายใน 20</span>
+            <span class="t-name" data-i18n="task4.name">สรุปรายงานผู้บริหารรายเดือน</span>
+            <span class="t-status ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="task4.status">ส่งแล้ว</span></span>
           </div>
           <div class="task">
-            <span class="t-date">ส.ค. 31</span>
-            <span class="t-name">ภ.ง.ด.51 — ภาษีครึ่งปีนิติบุคคล</span>
-            <span class="t-status due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> กำหนดถัดไป</span>
+            <span class="t-date" data-i18n="task5.date">ส.ค. 31</span>
+            <span class="t-name" data-i18n="task5.name">ภ.ง.ด.51 — ภาษีครึ่งปีนิติบุคคล</span>
+            <span class="t-status due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> <span data-i18n="task5.status">กำหนดถัดไป</span></span>
           </div>
         </div>
       </div>
       <div class="float-badge b1">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-        <span class="tt"><b>ยื่นภาษีตรงเวลา</b>ไม่มีค่าปรับ</span>
+        <span class="tt" data-i18n="badge1"><b>ยื่นภาษีตรงเวลา</b>ไม่มีค่าปรับ</span>
       </div>
       <div class="float-badge b2">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <span class="tt"><b>นักบัญชี CPD</b>ขึ้นทะเบียนถูกต้อง</span>
+        <span class="tt" data-i18n="badge2"><b>นักบัญชี CPD</b>ขึ้นทะเบียนถูกต้อง</span>
       </div>
     </div>
   </div>
@@ -237,14 +246,14 @@
 <!-- ===== Trust strip ===== -->
 <div class="trust">
   <div class="wrap">
-    <span class="lbl">รับทำบัญชีในเชียงใหม่และทั่วประเทศ หลากหลายอุตสาหกรรม</span>
+    <span class="lbl" data-i18n="trust.lbl">รับทำบัญชีในเชียงใหม่และทั่วประเทศ หลากหลายอุตสาหกรรม</span>
     <div class="logos">
-      <span class="cl">ร้านอาหาร</span>
-      <span class="cl">อีคอมเมิร์ซ</span>
-      <span class="cl">รับเหมาก่อสร้าง</span>
-      <span class="cl">คลินิก</span>
-      <span class="cl">นำเข้า–ส่งออก</span>
-      <span class="cl">โรงงาน</span>
+      <span class="cl" data-i18n="trust1">ร้านอาหาร</span>
+      <span class="cl" data-i18n="trust2">อีคอมเมิร์ซ</span>
+      <span class="cl" data-i18n="trust3">รับเหมาก่อสร้าง</span>
+      <span class="cl" data-i18n="trust4">คลินิก</span>
+      <span class="cl" data-i18n="trust5">นำเข้า–ส่งออก</span>
+      <span class="cl" data-i18n="trust6">โรงงาน</span>
     </div>
   </div>
 </div>
@@ -253,10 +262,10 @@
 <section class="stats">
   <div class="wrap">
     <div class="grid">
-      <div class="stat reveal"><div class="num" data-count="100" data-suffix="%">0</div><div class="cap">ยื่นภาษีตรงเวลา</div></div>
-      <div class="stat reveal d1"><div class="num" data-count="6">0</div><div class="cap">บริการครอบวงจร</div></div>
-      <div class="stat reveal d2"><div class="num" data-count="1" data-suffix=" วัน">0</div><div class="cap">ติดต่อกลับภายในวันทำการ</div></div>
-      <div class="stat reveal d3"><div class="num">CPD</div><div class="cap">นักบัญชีขึ้นทะเบียนถูกต้อง</div></div>
+      <div class="stat reveal"><div class="num" data-count="100" data-suffix="%">0</div><div class="cap" data-i18n="stat1.cap">ยื่นภาษีตรงเวลา</div></div>
+      <div class="stat reveal d1"><div class="num" data-count="6">0</div><div class="cap" data-i18n="stat2.cap">บริการครอบวงจร</div></div>
+      <div class="stat reveal d2"><div class="num" data-count="1" data-suffix=" วัน" data-suffix-en=" day">0</div><div class="cap" data-i18n="stat3.cap">ติดต่อกลับภายในวันทำการ</div></div>
+      <div class="stat reveal d3"><div class="num">CPD</div><div class="cap" data-i18n="stat4.cap">นักบัญชีขึ้นทะเบียนถูกต้อง</div></div>
     </div>
   </div>
 </section>
@@ -265,75 +274,75 @@
 <section class="sec alt" id="services">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span> บริการของเรา</span>
-      <h2>รับทำบัญชีเชียงใหม่ ครบทุกงานบัญชีและภาษี ในที่เดียว</h2>
-      <p>ไม่ว่าธุรกิจของคุณจะอยู่ในขั้นไหน เรามีบริการที่เหมาะกับคุณ ตั้งแต่วันแรกที่เริ่มจดทะเบียน</p>
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="services.eyebrow">บริการของเรา</span></span>
+      <h2 data-i18n="services.h2">รับทำบัญชีเชียงใหม่ ครบทุกงานบัญชีและภาษี ในที่เดียว</h2>
+      <p data-i18n="services.p">ไม่ว่าธุรกิจของคุณจะอยู่ในขั้นไหน เรามีบริการที่เหมาะกับคุณ ตั้งแต่วันแรกที่เริ่มจดทะเบียน</p>
     </div>
     <div class="svc-grid">
 
       <div class="svc reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><line x1="9" y1="9" x2="9" y2="9.01"/><line x1="9" y1="12" x2="9" y2="12.01"/><line x1="9" y1="15" x2="9" y2="15.01"/></svg></div>
-        <h3>จดทะเบียนบริษัท</h3>
-        <p>เปิดบริษัทใหม่ครบจบในที่เดียว เราจัดเตรียมเอกสารและดำเนินการให้ทั้งหมด</p>
+        <h3 data-i18n="svc1.title">จดทะเบียนบริษัท</h3>
+        <p data-i18n="svc1.desc">เปิดบริษัทใหม่ครบจบในที่เดียว เราจัดเตรียมเอกสารและดำเนินการให้ทั้งหมด</p>
         <ul class="feats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> จดทะเบียนบริษัท / ห้างหุ้นส่วน</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ขอเลขประจำตัวผู้เสียภาษี</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> จดทะเบียนภาษีมูลค่าเพิ่ม (VAT)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc1.f1">จดทะเบียนบริษัท / ห้างหุ้นส่วน</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc1.f2">ขอเลขประจำตัวผู้เสียภาษี</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc1.f3">จดทะเบียนภาษีมูลค่าเพิ่ม (VAT)</span></li>
         </ul>
       </div>
 
       <div class="svc reveal d1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/></svg></div>
-        <h3>รับทำบัญชีรายเดือน</h3>
-        <p>บันทึกบัญชีอย่างถูกต้องตามมาตรฐาน พร้อมรายงานสรุปให้เจ้าของอ่านเข้าใจง่าย</p>
+        <h3 data-i18n="svc2.title">รับทำบัญชีรายเดือน</h3>
+        <p data-i18n="svc2.desc">บันทึกบัญชีอย่างถูกต้องตามมาตรฐาน พร้อมรายงานสรุปให้เจ้าของอ่านเข้าใจง่าย</p>
         <ul class="feats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> บันทึกรายการบัญชีรายเดือน</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> จัดทำงบทดลองและสมุดบัญชี</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> รายงานสรุปผลประกอบการ</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc2.f1">บันทึกรายการบัญชีรายเดือน</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc2.f2">จัดทำงบทดลองและสมุดบัญชี</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc2.f3">รายงานสรุปผลประกอบการ</span></li>
         </ul>
       </div>
 
       <div class="svc reveal d2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="18" x2="13" y2="18"/></svg></div>
-        <h3>ปิดงบการเงินประจำปี</h3>
-        <p>จัดทำงบการเงินที่ถูกต้อง พร้อมประสานงานผู้สอบบัญชีและยื่นต่อหน่วยงาน</p>
+        <h3 data-i18n="svc3.title">ปิดงบการเงินประจำปี</h3>
+        <p data-i18n="svc3.desc">จัดทำงบการเงินที่ถูกต้อง พร้อมประสานงานผู้สอบบัญชีและยื่นต่อหน่วยงาน</p>
         <ul class="feats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> จัดทำงบการเงินประจำปี</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ประสานงานผู้สอบบัญชี (CPA / TA)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ยื่น สบช.3 และ ภ.ง.ด.50</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc3.f1">จัดทำงบการเงินประจำปี</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc3.f2">ประสานงานผู้สอบบัญชี (CPA / TA)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc3.f3">ยื่น สบช.3 และ ภ.ง.ด.50</span></li>
         </ul>
       </div>
 
       <div class="svc reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h3>ยื่นภาษีครบวงจร</h3>
-        <p>ดูแลการยื่นภาษีทุกประเภทให้ถูกต้องและตรงเวลา หมดกังวลเรื่องค่าปรับ</p>
+        <h3 data-i18n="svc4.title">ยื่นภาษีครบวงจร</h3>
+        <p data-i18n="svc4.desc">ดูแลการยื่นภาษีทุกประเภทให้ถูกต้องและตรงเวลา หมดกังวลเรื่องค่าปรับ</p>
         <ul class="feats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ภ.ง.ด.1, 3, 53 รายเดือน</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ภ.พ.30 ภาษีมูลค่าเพิ่ม</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ภ.ง.ด.50, 51 ภาษีเงินได้นิติบุคคล</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc4.f1">ภ.ง.ด.1, 3, 53 รายเดือน</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc4.f2">ภ.พ.30 ภาษีมูลค่าเพิ่ม</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc4.f3">ภ.ง.ด.50, 51 ภาษีเงินได้นิติบุคคล</span></li>
         </ul>
       </div>
 
       <div class="svc reveal d1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div>
-        <h3>ประกันสังคม &amp; เงินเดือน</h3>
-        <p>จัดการงานบุคคลด้านเอกสารราชการให้เรียบร้อย ถูกต้องตามกฎหมายแรงงาน</p>
+        <h3 data-i18n="svc5.title">ประกันสังคม &amp; เงินเดือน</h3>
+        <p data-i18n="svc5.desc">จัดการงานบุคคลด้านเอกสารราชการให้เรียบร้อย ถูกต้องตามกฎหมายแรงงาน</p>
         <ul class="feats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ขึ้นทะเบียนนายจ้าง–ลูกจ้าง</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ยื่นแบบและนำส่งเงินสมทบ</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> จัดทำเอกสารเงินเดือน (Payroll)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc5.f1">ขึ้นทะเบียนนายจ้าง–ลูกจ้าง</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc5.f2">ยื่นแบบและนำส่งเงินสมทบ</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc5.f3">จัดทำเอกสารเงินเดือน (Payroll)</span></li>
         </ul>
       </div>
 
       <div class="svc reveal d2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div>
-        <h3>วางระบบ &amp; ที่ปรึกษา</h3>
-        <p>วางรากฐานบัญชีให้แข็งแรง พร้อมวางแผนภาษีอย่างถูกต้องเพื่อประหยัดอย่างถูกกฎหมาย</p>
+        <h3 data-i18n="svc6.title">วางระบบ &amp; ที่ปรึกษา</h3>
+        <p data-i18n="svc6.desc">วางรากฐานบัญชีให้แข็งแรง พร้อมวางแผนภาษีอย่างถูกต้องเพื่อประหยัดอย่างถูกกฎหมาย</p>
         <ul class="feats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> วางระบบเอกสารและบัญชี</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> วางแผนภาษีประจำปี</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ให้คำปรึกษาธุรกิจตลอดสัญญา</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc6.f1">วางระบบเอกสารและบัญชี</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc6.f2">วางแผนภาษีประจำปี</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="svc6.f3">ให้คำปรึกษาธุรกิจตลอดสัญญา</span></li>
         </ul>
       </div>
 
@@ -347,38 +356,38 @@
     <div class="why">
       <div class="why-media reveal">
         <div class="why-img" role="img" aria-label="ภาพทีมนักบัญชีกำลังทำงาน" style="background-image:repeating-linear-gradient(135deg,#EEF4E2 0 14px,#F5F8EF 14px 28px);display:flex;align-items:center;justify-content:center">
-          <span style="font-family:monospace;font-size:13px;color:#9AA189">[ ภาพทีมงาน / สำนักงาน ]</span>
+          <span style="font-family:monospace;font-size:13px;color:#9AA189" data-i18n="why.imgph">[ ภาพทีมงาน / สำนักงาน ]</span>
         </div>
         <div class="why-quote">
-          <p>“เราเชื่อว่าบัญชีที่ดี ไม่ใช่แค่ตัวเลขที่ถูกต้อง แต่คือเครื่องมือที่ช่วยให้เจ้าของธุรกิจตัดสินใจได้ดีขึ้น”</p>
-          <span class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg> ผู้บริหาร — ผู้ตรวจสอบบัญชีภาษีอากร (TA)</span>
+          <p data-i18n="why.quote">“เราเชื่อว่าบัญชีที่ดี ไม่ใช่แค่ตัวเลขที่ถูกต้อง แต่คือเครื่องมือที่ช่วยให้เจ้าของธุรกิจตัดสินใจได้ดีขึ้น”</p>
+          <span class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg> <span data-i18n="why.who">ผู้บริหาร — ผู้ตรวจสอบบัญชีภาษีอากร (TA)</span></span>
         </div>
       </div>
 
       <div class="why-content reveal d1">
-        <span class="eyebrow"><span class="dot"></span> ทำไมต้องเรา</span>
-        <h2 style="font-size:clamp(28px,3.6vw,42px);margin:16px 0 14px">ตั้งใจดูแลธุรกิจคุณ<br>เหมือนเป็นธุรกิจของเราเอง</h2>
-        <p style="color:var(--muted);font-size:17px;margin-bottom:28px">มากกว่าการลงบัญชี เรามุ่งมั่นเป็นพาร์ตเนอร์ที่อยู่เคียงข้างธุรกิจคุณในทุกการเติบโต</p>
+        <span class="eyebrow"><span class="dot"></span> <span data-i18n="why.eyebrow">ทำไมต้องเรา</span></span>
+        <h2 style="font-size:clamp(28px,3.6vw,42px);margin:16px 0 14px" data-i18n="why.h2">ตั้งใจดูแลธุรกิจคุณ<br>เหมือนเป็นธุรกิจของเราเอง</h2>
+        <p style="color:var(--muted);font-size:17px;margin-bottom:28px" data-i18n="why.p">มากกว่าการลงบัญชี เรามุ่งมั่นเป็นพาร์ตเนอร์ที่อยู่เคียงข้างธุรกิจคุณในทุกการเติบโต</p>
         <div class="why-feats">
           <div class="wf">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3-1-3-3-3-3 2-3 3-1-3-3-3-3 2-3 3-1 3-3 3 2 3 3 3 1 3 3 3 3-2 3-3 1 3 3 3 3-2 3-3 1 3 3 3z"/></svg></div>
-            <h4>นักบัญชีมืออาชีพ</h4>
-            <p>นำทีมโดยผู้บริหารที่เป็นผู้ตรวจสอบบัญชีภาษีอากร (TA) ทีมงานขึ้นทะเบียน CPD อัปเดตกฎหมายภาษีตลอดเวลา</p>
+            <h4 data-i18n="wf1.title">นักบัญชีมืออาชีพ</h4>
+            <p data-i18n="wf1.desc">นำทีมโดยผู้บริหารที่เป็นผู้ตรวจสอบบัญชีภาษีอากร (TA) ทีมงานขึ้นทะเบียน CPD อัปเดตกฎหมายภาษีตลอดเวลา</p>
           </div>
           <div class="wf">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <h4>ยื่นตรงเวลา 100%</h4>
-            <p>เรามีระบบแจ้งเตือนและตรวจสอบ ไม่ปล่อยให้คุณเสียค่าปรับโดยไม่จำเป็น</p>
+            <h4 data-i18n="wf2.title">ยื่นตรงเวลา 100%</h4>
+            <p data-i18n="wf2.desc">เรามีระบบแจ้งเตือนและตรวจสอบ ไม่ปล่อยให้คุณเสียค่าปรับโดยไม่จำเป็น</p>
           </div>
           <div class="wf">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-            <h4>ราคาชัดเจน โปร่งใส</h4>
-            <p>รู้ค่าใช้จ่ายล่วงหน้าเป็นแพ็กเกจ ไม่มีค่าใช้จ่ายแอบแฝงระหว่างทาง</p>
+            <h4 data-i18n="wf3.title">ราคาชัดเจน โปร่งใส</h4>
+            <p data-i18n="wf3.desc">รู้ค่าใช้จ่ายล่วงหน้าเป็นแพ็กเกจ ไม่มีค่าใช้จ่ายแอบแฝงระหว่างทาง</p>
           </div>
           <div class="wf">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-            <h4>มีผู้ดูแลประจำ</h4>
-            <p>ทักได้ทุกเรื่องผ่าน LINE มีทีมตอบคำถามที่เข้าใจธุรกิจคุณอยู่เสมอ</p>
+            <h4 data-i18n="wf4.title">มีผู้ดูแลประจำ</h4>
+            <p data-i18n="wf4.desc">ทักได้ทุกเรื่องผ่าน LINE มีทีมตอบคำถามที่เข้าใจธุรกิจคุณอยู่เสมอ</p>
           </div>
         </div>
       </div>
@@ -390,9 +399,9 @@
 <section class="creds" id="credentials">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span> ใบอนุญาตและการรับรอง</span>
-      <h2>ประกอบวิชาชีพอย่างถูกต้องตามกฎหมาย</h2>
-      <p>เราขึ้นทะเบียนและได้รับการรับรองอย่างครบถ้วน เพื่อให้คุณมั่นใจในทุกบริการ</p>
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="creds.eyebrow">ใบอนุญาตและการรับรอง</span></span>
+      <h2 data-i18n="creds.h2">ประกอบวิชาชีพอย่างถูกต้องตามกฎหมาย</h2>
+      <p data-i18n="creds.p">เราขึ้นทะเบียนและได้รับการรับรองอย่างครบถ้วน เพื่อให้คุณมั่นใจในทุกบริการ</p>
     </div>
     <div class="creds-slider">
     <div class="creds-track" id="credsTrack">
@@ -402,11 +411,11 @@
         <div class="slot">
           <!-- ใส่รูปใบอนุญาตที่นี่: <img src="assets/license-ta.jpg" alt="ใบอนุญาตผู้สอบบัญชีภาษีอากร"> -->
           <span class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><circle cx="12" cy="14" r="2.2"/><path d="M9.5 21l1-3.2M14.5 21l-1-3.2"/></svg></span>
-          <span class="ph-txt">พื้นที่สำหรับใบอนุญาต<br>ผู้สอบบัญชีภาษีอากร</span>
+          <span class="ph-txt" data-i18n="cred1.ph">พื้นที่สำหรับใบอนุญาต<br>ผู้สอบบัญชีภาษีอากร</span>
         </div>
         <div class="cred-label">
-          <div class="nm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ผู้สอบบัญชีภาษีอากร (TA)</div>
-          <div class="sub">ออกโดยกรมสรรพากร</div>
+          <div class="nm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="cred1.nm">ผู้สอบบัญชีภาษีอากร (TA)</span></div>
+          <div class="sub" data-i18n="cred1.sub">ออกโดยกรมสรรพากร</div>
         </div>
       </div>
 
@@ -415,11 +424,11 @@
         <div class="slot">
           <!-- ใส่รูปใบอนุญาตที่นี่: <img src="assets/license-cpd.jpg" alt="หนังสือรับรองผู้ทำบัญชี"> -->
           <span class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></span>
-          <span class="ph-txt">พื้นที่สำหรับหนังสือรับรอง<br>การขึ้นทะเบียนผู้ทำบัญชี</span>
+          <span class="ph-txt" data-i18n="cred2.ph">พื้นที่สำหรับหนังสือรับรอง<br>การขึ้นทะเบียนผู้ทำบัญชี</span>
         </div>
         <div class="cred-label">
-          <div class="nm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ผู้ทำบัญชี (CPD)</div>
-          <div class="sub">ขึ้นทะเบียนกับกรมพัฒนาธุรกิจการค้า</div>
+          <div class="nm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="cred2.nm">ผู้ทำบัญชี (CPD)</span></div>
+          <div class="sub" data-i18n="cred2.sub">ขึ้นทะเบียนกับกรมพัฒนาธุรกิจการค้า</div>
         </div>
       </div>
 
@@ -428,11 +437,11 @@
         <div class="slot">
           <!-- ใส่รูปใบอนุญาตที่นี่: <img src="assets/license-dbd.jpg" alt="หนังสือรับรองนิติบุคคล"> -->
           <span class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><line x1="9" y1="9" x2="9" y2="9.01"/><line x1="9" y1="13" x2="9" y2="13.01"/></svg></span>
-          <span class="ph-txt">พื้นที่สำหรับหนังสือรับรอง<br>การจดทะเบียนนิติบุคคล</span>
+          <span class="ph-txt" data-i18n="cred3.ph">พื้นที่สำหรับหนังสือรับรอง<br>การจดทะเบียนนิติบุคคล</span>
         </div>
         <div class="cred-label">
-          <div class="nm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> จดทะเบียนนิติบุคคล</div>
-          <div class="sub">ห้างหุ้นส่วนจำกัด จดทะเบียนถูกต้อง</div>
+          <div class="nm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="cred3.nm">จดทะเบียนนิติบุคคล</span></div>
+          <div class="sub" data-i18n="cred3.sub">ห้างหุ้นส่วนจำกัด จดทะเบียนถูกต้อง</div>
         </div>
       </div>
 
@@ -441,11 +450,11 @@
         <div class="slot">
           <!-- ใส่รูปใบอนุญาตที่นี่: <img src="assets/license-quality.jpg" alt="สำนักงานบัญชีคุณภาพ"> -->
           <span class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span>
-          <span class="ph-txt">พื้นที่สำหรับใบรับรอง<br>มาตรฐานสำนักงานบัญชี</span>
+          <span class="ph-txt" data-i18n="cred4.ph">พื้นที่สำหรับใบรับรอง<br>มาตรฐานสำนักงานบัญชี</span>
         </div>
         <div class="cred-label">
-          <div class="nm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> มาตรฐานสำนักงานบัญชี</div>
-          <div class="sub">ดำเนินงานตามแนวทาง สบช.</div>
+          <div class="nm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="cred4.nm">มาตรฐานสำนักงานบัญชี</span></div>
+          <div class="sub" data-i18n="cred4.sub">ดำเนินงานตามแนวทาง สบช.</div>
         </div>
       </div>
 
@@ -456,7 +465,7 @@
       <button class="creds-arrow" id="credsNext" aria-label="ถัดไป"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
     </div>
     </div>
-    <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:24px">* นำใบอนุญาตหรือหนังสือรับรองจริงมาแสดงในช่องด้านบนได้ เพื่อเพิ่มความน่าเชื่อถือ</p>
+    <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:24px" data-i18n="creds.note">* นำใบอนุญาตหรือหนังสือรับรองจริงมาแสดงในช่องด้านบนได้ เพื่อเพิ่มความน่าเชื่อถือ</p>
   </div>
 </section>
 
@@ -464,15 +473,15 @@
 <section class="sec alt" id="process">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span> ขั้นตอนการทำงาน</span>
-      <h2>เริ่มต้นง่าย ใน 4 ขั้นตอน</h2>
-      <p>ไม่ยุ่งยากอย่างที่คิด เราดูแลให้ตั้งแต่ต้น แม้คุณจะย้ายมาจากสำนักงานบัญชีเดิม</p>
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="process.eyebrow">ขั้นตอนการทำงาน</span></span>
+      <h2 data-i18n="process.h2">เริ่มต้นง่าย ใน 4 ขั้นตอน</h2>
+      <p data-i18n="process.p">ไม่ยุ่งยากอย่างที่คิด เราดูแลให้ตั้งแต่ต้น แม้คุณจะย้ายมาจากสำนักงานบัญชีเดิม</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><div class="ln"></div><div class="n">1</div><h4>ปรึกษาฟรี</h4><p>พูดคุยเข้าใจธุรกิจและความต้องการของคุณ โดยไม่มีค่าใช้จ่ายและไม่ผูกมัด</p></div>
-      <div class="step reveal d1"><div class="ln"></div><div class="n">2</div><h4>เสนอแพ็กเกจ</h4><p>ประเมินปริมาณงานและเสนอแพ็กเกจที่เหมาะสมกับขนาดธุรกิจของคุณ</p></div>
-      <div class="step reveal d2"><div class="ln"></div><div class="n">3</div><h4>ส่งมอบเอกสาร</h4><p>เริ่มงานได้ทันที ส่งเอกสารสะดวกทั้งออนไลน์และออฟไลน์ตามที่คุณถนัด</p></div>
-      <div class="step reveal d3"><div class="n">4</div><h4>ดูแลต่อเนื่อง</h4><p>จัดทำบัญชี ยื่นภาษี และส่งรายงานสรุปให้คุณทุกเดือนอย่างสม่ำเสมอ</p></div>
+      <div class="step reveal"><div class="ln"></div><div class="n">1</div><h4 data-i18n="step1.title">ปรึกษาฟรี</h4><p data-i18n="step1.desc">พูดคุยเข้าใจธุรกิจและความต้องการของคุณ โดยไม่มีค่าใช้จ่ายและไม่ผูกมัด</p></div>
+      <div class="step reveal d1"><div class="ln"></div><div class="n">2</div><h4 data-i18n="step2.title">เสนอแพ็กเกจ</h4><p data-i18n="step2.desc">ประเมินปริมาณงานและเสนอแพ็กเกจที่เหมาะสมกับขนาดธุรกิจของคุณ</p></div>
+      <div class="step reveal d2"><div class="ln"></div><div class="n">3</div><h4 data-i18n="step3.title">ส่งมอบเอกสาร</h4><p data-i18n="step3.desc">เริ่มงานได้ทันที ส่งเอกสารสะดวกทั้งออนไลน์และออฟไลน์ตามที่คุณถนัด</p></div>
+      <div class="step reveal d3"><div class="n">4</div><h4 data-i18n="step4.title">ดูแลต่อเนื่อง</h4><p data-i18n="step4.desc">จัดทำบัญชี ยื่นภาษี และส่งรายงานสรุปให้คุณทุกเดือนอย่างสม่ำเสมอ</p></div>
     </div>
   </div>
 </section>
@@ -481,70 +490,70 @@
 <section class="sec" id="pricing">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span> แพ็กเกจราคา</span>
-      <h2>ราคาชัดเจน เลือกได้ตามขนาดธุรกิจ</h2>
-      <p>ทุกแพ็กเกจรวมการให้คำปรึกษาและไม่มีค่าใช้จ่ายแอบแฝง ปรับเปลี่ยนได้เมื่อธุรกิจเติบโต</p>
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="pricing.eyebrow">แพ็กเกจราคา</span></span>
+      <h2 data-i18n="pricing.h2">ราคาชัดเจน เลือกได้ตามขนาดธุรกิจ</h2>
+      <p data-i18n="pricing.p">ทุกแพ็กเกจรวมการให้คำปรึกษาและไม่มีค่าใช้จ่ายแอบแฝง ปรับเปลี่ยนได้เมื่อธุรกิจเติบโต</p>
     </div>
 
     <div class="price-toggle reveal">
       <div class="tg" id="priceTg">
         <div class="knob"></div>
-        <button class="active" data-period="month">รายเดือน</button>
-        <button data-period="year">รายปี</button>
+        <button class="active" data-period="month" data-i18n="price.month">รายเดือน</button>
+        <button data-period="year" data-i18n="price.year">รายปี</button>
       </div>
-      <span class="save-pill">รายปี ประหยัด 2 เดือน</span>
+      <span class="save-pill" data-i18n="price.save">รายปี ประหยัด 2 เดือน</span>
     </div>
 
     <div class="plans">
       <div class="plan reveal">
-        <div class="pname">เริ่มต้น</div>
-        <div class="pdesc">สำหรับธุรกิจขนาดเล็กหรือเพิ่งเริ่มเปิดบริษัท</div>
-        <div class="pstart">เริ่มต้นเพียง</div>
+        <div class="pname" data-i18n="plan1.name">เริ่มต้น</div>
+        <div class="pdesc" data-i18n="plan1.desc">สำหรับธุรกิจขนาดเล็กหรือเพิ่งเริ่มเปิดบริษัท</div>
+        <div class="pstart" data-i18n="plan.start">เริ่มต้นเพียง</div>
         <div class="pprice"><span class="cur">฿</span><span class="amt" data-month="1,500" data-year="15,000">1,500</span><span class="per">/ เดือน</span></div>
-        <div class="pnote" data-note-month="เริ่มต้นที่ ไม่เกิน 30 รายการ/เดือน" data-note-year="เรียกเก็บปีละครั้ง • ฟรี 2 เดือน">เริ่มต้นที่ ไม่เกิน 30 รายการ/เดือน</div>
+        <div class="pnote" data-note-month="เริ่มต้นที่ ไม่เกิน 30 รายการ/เดือน" data-note-year="เรียกเก็บปีละครั้ง • ฟรี 2 เดือน" data-note-month-en="Starting at, up to 30 transactions/month" data-note-year-en="Billed annually • 2 months free">เริ่มต้นที่ ไม่เกิน 30 รายการ/เดือน</div>
         <ul class="pfeats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> บันทึกบัญชีรายเดือน</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ยื่นภาษีรายเดือนครบถ้วน</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ปิดงบการเงินประจำปี</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ปรึกษาผ่าน LINE</li>
-          <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> วางแผนภาษีเชิงลึก</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan1.f1">บันทึกบัญชีรายเดือน</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan1.f2">ยื่นภาษีรายเดือนครบถ้วน</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan1.f3">ปิดงบการเงินประจำปี</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan1.f4">ปรึกษาผ่าน LINE</span></li>
+          <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> <span data-i18n="plan1.f5">วางแผนภาษีเชิงลึก</span></li>
         </ul>
-        <a href="#contact" class="btn btn-ghost btn-block">เลือกแพ็กเกจนี้</a>
+        <a href="#contact" class="btn btn-ghost btn-block" data-i18n="plan.cta">เลือกแพ็กเกจนี้</a>
       </div>
 
       <div class="plan featured reveal d1">
-        <div class="pname">เติบโต</div>
-        <div class="pdesc">สำหรับธุรกิจที่กำลังขยายและมีรายการมากขึ้น</div>
-        <div class="pstart">เริ่มต้นเพียง</div>
+        <div class="pname" data-i18n="plan2.name">เติบโต</div>
+        <div class="pdesc" data-i18n="plan2.desc">สำหรับธุรกิจที่กำลังขยายและมีรายการมากขึ้น</div>
+        <div class="pstart" data-i18n="plan.start">เริ่มต้นเพียง</div>
         <div class="pprice"><span class="cur">฿</span><span class="amt" data-month="3,500" data-year="35,000">3,500</span><span class="per">/ เดือน</span></div>
-        <div class="pnote" data-note-month="ไม่เกิน 100 รายการ/เดือน • มีผู้ดูแลประจำ" data-note-year="เรียกเก็บปีละครั้ง • ฟรี 2 เดือน">ไม่เกิน 100 รายการ/เดือน • มีผู้ดูแลประจำ</div>
+        <div class="pnote" data-note-month="ไม่เกิน 100 รายการ/เดือน • มีผู้ดูแลประจำ" data-note-year="เรียกเก็บปีละครั้ง • ฟรี 2 เดือน" data-note-month-en="Up to 100 transactions/month • dedicated contact" data-note-year-en="Billed annually • 2 months free">ไม่เกิน 100 รายการ/เดือน • มีผู้ดูแลประจำ</div>
         <ul class="pfeats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ทุกอย่างในแพ็กเกจเริ่มต้น</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> รายงานผู้บริหารรายเดือน</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> งานประกันสังคม &amp; Payroll</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> วางแผนภาษีประจำปี</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ผู้ดูแลบัญชีประจำ 1 คน</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan2.f1">ทุกอย่างในแพ็กเกจเริ่มต้น</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan2.f2">รายงานผู้บริหารรายเดือน</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan2.f3">งานประกันสังคม &amp; Payroll</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan2.f4">วางแผนภาษีประจำปี</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan2.f5">ผู้ดูแลบัญชีประจำ 1 คน</span></li>
         </ul>
-        <a href="#contact" class="btn btn-primary btn-block">เลือกแพ็กเกจนี้</a>
+        <a href="#contact" class="btn btn-primary btn-block" data-i18n="plan.cta">เลือกแพ็กเกจนี้</a>
       </div>
 
       <div class="plan reveal d2">
-        <div class="pname">องค์กร</div>
-        <div class="pdesc">สำหรับธุรกิจขนาดกลางที่ต้องการการดูแลเฉพาะ</div>
-        <div class="pstart">เริ่มต้นเพียง</div>
+        <div class="pname" data-i18n="plan3.name">องค์กร</div>
+        <div class="pdesc" data-i18n="plan3.desc">สำหรับธุรกิจขนาดกลางที่ต้องการการดูแลเฉพาะ</div>
+        <div class="pstart" data-i18n="plan.start">เริ่มต้นเพียง</div>
         <div class="pprice"><span class="cur">฿</span><span class="amt" data-month="6,500" data-year="65,000">6,500</span><span class="per">/ เดือน</span></div>
-        <div class="pnote" data-note-month="ปริมาณรายการไม่จำกัด • วางระบบให้" data-note-year="เรียกเก็บปีละครั้ง • ฟรี 2 เดือน">ปริมาณรายการไม่จำกัด • วางระบบให้</div>
+        <div class="pnote" data-note-month="ปริมาณรายการไม่จำกัด • วางระบบให้" data-note-year="เรียกเก็บปีละครั้ง • ฟรี 2 เดือน" data-note-month-en="Unlimited transactions • systems setup included" data-note-year-en="Billed annually • 2 months free">ปริมาณรายการไม่จำกัด • วางระบบให้</div>
         <ul class="pfeats">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ทุกอย่างในแพ็กเกจเติบโต</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> วางระบบบัญชีเฉพาะธุรกิจ</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ที่ปรึกษาการเงินเชิงกลยุทธ์</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> รายงานวิเคราะห์เชิงลึก</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ทีมดูแลเฉพาะธุรกิจคุณ</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan3.f1">ทุกอย่างในแพ็กเกจเติบโต</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan3.f2">วางระบบบัญชีเฉพาะธุรกิจ</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan3.f3">ที่ปรึกษาการเงินเชิงกลยุทธ์</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan3.f4">รายงานวิเคราะห์เชิงลึก</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="plan3.f5">ทีมดูแลเฉพาะธุรกิจคุณ</span></li>
         </ul>
-        <a href="#contact" class="btn btn-ghost btn-block">เลือกแพ็กเกจนี้</a>
+        <a href="#contact" class="btn btn-ghost btn-block" data-i18n="plan.cta">เลือกแพ็กเกจนี้</a>
       </div>
     </div>
-    <p style="text-align:center;color:var(--muted);font-size:14.5px;margin-top:24px">* ราคาเป็นเรทเริ่มต้น ค่าบริการจริงขึ้นอยู่กับปริมาณเอกสารและความซับซ้อนของธุรกิจ — <a href="#contact" style="color:var(--green-800);font-weight:600">ขอใบเสนอราคาฟรี</a></p>
+    <p style="text-align:center;color:var(--muted);font-size:14.5px;margin-top:24px" data-i18n="pricing.note">* ราคาเป็นเรทเริ่มต้น ค่าบริการจริงขึ้นอยู่กับปริมาณเอกสารและความซับซ้อนของธุรกิจ — <a href="#contact" style="color:var(--green-800);font-weight:600">ขอใบเสนอราคาฟรี</a></p>
   </div>
 </section>
 
@@ -552,8 +561,8 @@
 <section class="sec alt" id="reviews">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span> เสียงจากลูกค้า</span>
-      <h2>ธุรกิจที่เติบโตไปกับเรา</h2>
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="reviews.eyebrow">เสียงจากลูกค้า</span></span>
+      <h2 data-i18n="reviews.h2">ธุรกิจที่เติบโตไปกับเรา</h2>
     </div>
     <div class="tgrid">
       <div class="tcard reveal">
@@ -564,8 +573,8 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <p class="quote">“ตั้งแต่ย้ายมาใช้บริการ ไม่เคยต้องกังวลเรื่องยื่นภาษีเลย ทีมงานคอยเตือนทุกครั้ง รายงานก็อ่านเข้าใจง่าย ทำให้เห็นภาพธุรกิจชัดขึ้นมาก”</p>
-        <div class="who"><span class="av">ก</span><div><div class="nm">คุณกานต์ ธนวัฒน์</div><div class="rl">เจ้าของร้านอาหาร อ.เมืองเชียงใหม่</div></div></div>
+        <p class="quote" data-i18n="t1.quote">“ตั้งแต่ย้ายมาใช้บริการ ไม่เคยต้องกังวลเรื่องยื่นภาษีเลย ทีมงานคอยเตือนทุกครั้ง รายงานก็อ่านเข้าใจง่าย ทำให้เห็นภาพธุรกิจชัดขึ้นมาก”</p>
+        <div class="who"><span class="av">ก</span><div><div class="nm" data-i18n="t1.nm">คุณกานต์ ธนวัฒน์</div><div class="rl" data-i18n="t1.rl">เจ้าของร้านอาหาร อ.เมืองเชียงใหม่</div></div></div>
       </div>
       <div class="tcard reveal d1">
         <div class="stars">
@@ -575,8 +584,8 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <p class="quote">“เพิ่งเปิดบริษัทใหม่ ไม่มีความรู้เรื่องบัญชีเลย ทางทีมช่วยดูแลตั้งแต่จดทะเบียน อธิบายทุกอย่างละเอียด ใจเย็นมาก แนะนำสำหรับมือใหม่จริง ๆ”</p>
-        <div class="who"><span class="av">ณ</span><div><div class="nm">คุณณิชา ศรีสุข</div><div class="rl">ผู้ก่อตั้งแบรนด์อีคอมเมิร์ซ เชียงใหม่</div></div></div>
+        <p class="quote" data-i18n="t2.quote">“เพิ่งเปิดบริษัทใหม่ ไม่มีความรู้เรื่องบัญชีเลย ทางทีมช่วยดูแลตั้งแต่จดทะเบียน อธิบายทุกอย่างละเอียด ใจเย็นมาก แนะนำสำหรับมือใหม่จริง ๆ”</p>
+        <div class="who"><span class="av">ณ</span><div><div class="nm" data-i18n="t2.nm">คุณณิชา ศรีสุข</div><div class="rl" data-i18n="t2.rl">ผู้ก่อตั้งแบรนด์อีคอมเมิร์ซ เชียงใหม่</div></div></div>
       </div>
       <div class="tcard reveal d2">
         <div class="stars">
@@ -586,8 +595,8 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <p class="quote">“ราคาชัดเจนตั้งแต่แรก ไม่มีบวกเพิ่มทีหลังเลย ที่ประทับใจคือคำแนะนำเรื่องวางแผนภาษี ช่วยให้บริษัทประหยัดได้จริงอย่างถูกต้องตามกฎหมาย”</p>
-        <div class="who"><span class="av">พ</span><div><div class="nm">คุณพิชญ์ รุ่งเรือง</div><div class="rl">กรรมการผู้จัดการ บจก.</div></div></div>
+        <p class="quote" data-i18n="t3.quote">“ราคาชัดเจนตั้งแต่แรก ไม่มีบวกเพิ่มทีหลังเลย ที่ประทับใจคือคำแนะนำเรื่องวางแผนภาษี ช่วยให้บริษัทประหยัดได้จริงอย่างถูกต้องตามกฎหมาย”</p>
+        <div class="who"><span class="av">พ</span><div><div class="nm" data-i18n="t3.nm">คุณพิชญ์ รุ่งเรือง</div><div class="rl" data-i18n="t3.rl">กรรมการผู้จัดการ บจก.</div></div></div>
       </div>
     </div>
   </div>
@@ -597,33 +606,33 @@
 <section class="sec" id="faq">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span> คำถามที่พบบ่อย</span>
-      <h2>เรื่องที่ลูกค้ามักถามเรา</h2>
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="faq.eyebrow">คำถามที่พบบ่อย</span></span>
+      <h2 data-i18n="faq.h2">เรื่องที่ลูกค้ามักถามเรา</h2>
     </div>
     <div class="faq-wrap">
       <div class="faq reveal">
-        <button class="q">รับทำบัญชีเชียงใหม่ ต้องเข้ามาที่สำนักงานไหม หรืออยู่ต่างจังหวัดก็ใช้ได้?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="a"><div class="inner">ไม่จำเป็นต้องเข้ามาที่สำนักงาน เรารับทำบัญชีทั้งลูกค้าในตัวเมืองเชียงใหม่ อำเภอรอบข้าง เช่น สันทราย หางดง สารภี ไปจนถึงลูกค้าทั่วประเทศ โดยส่งเอกสารออนไลน์ได้สะดวก พร้อมปรึกษาผ่าน LINE ได้ตลอด</div></div>
+        <button class="q"><span data-i18n="faq1.q">รับทำบัญชีเชียงใหม่ ต้องเข้ามาที่สำนักงานไหม หรืออยู่ต่างจังหวัดก็ใช้ได้?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="a"><div class="inner" data-i18n="faq1.a">ไม่จำเป็นต้องเข้ามาที่สำนักงาน เรารับทำบัญชีทั้งลูกค้าในตัวเมืองเชียงใหม่ อำเภอรอบข้าง เช่น สันทราย หางดง สารภี ไปจนถึงลูกค้าทั่วประเทศ โดยส่งเอกสารออนไลน์ได้สะดวก พร้อมปรึกษาผ่าน LINE ได้ตลอด</div></div>
       </div>
       <div class="faq reveal">
-        <button class="q">ค่าบริการคิดอย่างไร มีค่าใช้จ่ายแอบแฝงไหม?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="a"><div class="inner">ค่าบริการคิดเป็นแพ็กเกจรายเดือนตามปริมาณเอกสารและความซับซ้อนของธุรกิจ เราแจ้งราคาชัดเจนตั้งแต่ต้นและระบุในสัญญา ไม่มีการบวกเพิ่มระหว่างทาง หากปริมาณงานเปลี่ยนแปลงมาก เราจะแจ้งและตกลงกับคุณก่อนเสมอ</div></div>
+        <button class="q"><span data-i18n="faq2.q">ค่าบริการคิดอย่างไร มีค่าใช้จ่ายแอบแฝงไหม?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="a"><div class="inner" data-i18n="faq2.a">ค่าบริการคิดเป็นแพ็กเกจรายเดือนตามปริมาณเอกสารและความซับซ้อนของธุรกิจ เราแจ้งราคาชัดเจนตั้งแต่ต้นและระบุในสัญญา ไม่มีการบวกเพิ่มระหว่างทาง หากปริมาณงานเปลี่ยนแปลงมาก เราจะแจ้งและตกลงกับคุณก่อนเสมอ</div></div>
       </div>
       <div class="faq reveal">
-        <button class="q">ต้องเตรียมเอกสารอะไรบ้างในการส่งให้ทำบัญชี?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="a"><div class="inner">โดยทั่วไปคือ ใบกำกับภาษีซื้อ–ขาย ใบเสร็จรับเงิน รายการเดินบัญชีธนาคาร (Statement) และเอกสารค่าใช้จ่ายต่าง ๆ คุณส่งให้เราได้ทั้งแบบสแกนออนไลน์หรือเอกสารจริง เราจะมีเช็กลิสต์ให้ชัดเจนหลังเริ่มงาน เพื่อให้ส่งครบและสะดวกที่สุด</div></div>
+        <button class="q"><span data-i18n="faq3.q">ต้องเตรียมเอกสารอะไรบ้างในการส่งให้ทำบัญชี?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="a"><div class="inner" data-i18n="faq3.a">โดยทั่วไปคือ ใบกำกับภาษีซื้อ–ขาย ใบเสร็จรับเงิน รายการเดินบัญชีธนาคาร (Statement) และเอกสารค่าใช้จ่ายต่าง ๆ คุณส่งให้เราได้ทั้งแบบสแกนออนไลน์หรือเอกสารจริง เราจะมีเช็กลิสต์ให้ชัดเจนหลังเริ่มงาน เพื่อให้ส่งครบและสะดวกที่สุด</div></div>
       </div>
       <div class="faq reveal">
-        <button class="q">เพิ่งเปิดบริษัทใหม่ ยังไม่มีรายได้ ใช้บริการได้ไหม?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="a"><div class="inner">ได้แน่นอน เรามีแพ็กเกจสำหรับธุรกิจเริ่มต้นโดยเฉพาะ และยังช่วยดูแลตั้งแต่ขั้นตอนจดทะเบียนบริษัท แม้ยังไม่มีรายได้ บริษัทก็ยังต้องยื่นแบบภาษีและปิดงบประจำปี เราจึงช่วยให้คุณทำถูกต้องครบถ้วนตั้งแต่วันแรก</div></div>
+        <button class="q"><span data-i18n="faq4.q">เพิ่งเปิดบริษัทใหม่ ยังไม่มีรายได้ ใช้บริการได้ไหม?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="a"><div class="inner" data-i18n="faq4.a">ได้แน่นอน เรามีแพ็กเกจสำหรับธุรกิจเริ่มต้นโดยเฉพาะ และยังช่วยดูแลตั้งแต่ขั้นตอนจดทะเบียนบริษัท แม้ยังไม่มีรายได้ บริษัทก็ยังต้องยื่นแบบภาษีและปิดงบประจำปี เราจึงช่วยให้คุณทำถูกต้องครบถ้วนตั้งแต่วันแรก</div></div>
       </div>
       <div class="faq reveal">
-        <button class="q">ถ้าอยากย้ายจากสำนักงานบัญชีเดิม ยุ่งยากไหม?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="a"><div class="inner">ไม่ยุ่งยากเลย เรามีทีมช่วยประสานรับมอบงานจากสำนักงานเดิม ตรวจสอบความต่อเนื่องของข้อมูลบัญชีและภาษีให้เรียบร้อย คุณแทบไม่ต้องดำเนินการเองมาก ย้ายได้ทุกช่วงเวลาของปี</div></div>
+        <button class="q"><span data-i18n="faq5.q">ถ้าอยากย้ายจากสำนักงานบัญชีเดิม ยุ่งยากไหม?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="a"><div class="inner" data-i18n="faq5.a">ไม่ยุ่งยากเลย เรามีทีมช่วยประสานรับมอบงานจากสำนักงานเดิม ตรวจสอบความต่อเนื่องของข้อมูลบัญชีและภาษีให้เรียบร้อย คุณแทบไม่ต้องดำเนินการเองมาก ย้ายได้ทุกช่วงเวลาของปี</div></div>
       </div>
       <div class="faq reveal">
-        <button class="q">ติดต่อสอบถามระหว่างเดือนได้ทางไหนบ้าง?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="a"><div class="inner">ลูกค้าทุกแพ็กเกจสามารถปรึกษาผ่าน LINE ได้ในเวลาทำการ และแพ็กเกจเติบโตขึ้นไปจะมีผู้ดูแลบัญชีประจำที่เข้าใจธุรกิจคุณ คอยตอบคำถามและให้คำแนะนำได้ตลอดสัญญา</div></div>
+        <button class="q"><span data-i18n="faq6.q">ติดต่อสอบถามระหว่างเดือนได้ทางไหนบ้าง?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="a"><div class="inner" data-i18n="faq6.a">ลูกค้าทุกแพ็กเกจสามารถปรึกษาผ่าน LINE ได้ในเวลาทำการ และแพ็กเกจเติบโตขึ้นไปจะมีผู้ดูแลบัญชีประจำที่เข้าใจธุรกิจคุณ คอยตอบคำถามและให้คำแนะนำได้ตลอดสัญญา</div></div>
       </div>
     </div>
   </div>
@@ -634,10 +643,10 @@
   <div class="wrap">
     <div class="cta-inner reveal">
       <div class="in">
-        <h2>พร้อมให้บัญชีเป็นเรื่องที่คุณไม่ต้องกังวลอีกต่อไป</h2>
-        <p>นัดปรึกษาฟรีกับทีมนักบัญชีของเราวันนี้ ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</p>
+        <h2 data-i18n="cta.h2">พร้อมให้บัญชีเป็นเรื่องที่คุณไม่ต้องกังวลอีกต่อไป</h2>
+        <p data-i18n="cta.p">นัดปรึกษาฟรีกับทีมนักบัญชีของเราวันนี้ ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</p>
         <div class="cta-row">
-          <a href="#contact" class="btn btn-primary">นัดปรึกษาฟรี</a>
+          <a href="#contact" class="btn btn-primary" data-i18n="cta.btn">นัดปรึกษาฟรี</a>
           <a href="tel:021234567" class="btn btn-light">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             02-123-4567
@@ -653,29 +662,29 @@
   <div class="wrap">
     <div class="contact-grid">
       <div class="contact-left reveal">
-        <span class="eyebrow"><span class="dot"></span> ติดต่อเรา</span>
-        <h2 style="font-size:clamp(28px,3.6vw,42px);margin:16px 0 14px">เริ่มต้นง่าย ๆ เพียงทักหาเรา</h2>
-        <p style="color:var(--muted);font-size:17px;margin-bottom:28px">กรอกแบบฟอร์มหรือติดต่อผ่านช่องทางด้านล่าง ทีมงานจะติดต่อกลับภายใน 1 วันทำการ</p>
+        <span class="eyebrow"><span class="dot"></span> <span data-i18n="contact.eyebrow">ติดต่อเรา</span></span>
+        <h2 style="font-size:clamp(28px,3.6vw,42px);margin:16px 0 14px" data-i18n="contact.h2">เริ่มต้นง่าย ๆ เพียงทักหาเรา</h2>
+        <p style="color:var(--muted);font-size:17px;margin-bottom:28px" data-i18n="contact.p">กรอกแบบฟอร์มหรือติดต่อผ่านช่องทางด้านล่าง ทีมงานจะติดต่อกลับภายใน 1 วันทำการ</p>
         <div class="contact-info">
           <div class="ci">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            <div><div class="lbl">โทรศัพท์</div><div class="val">02-123-4567</div></div>
+            <div><div class="lbl" data-i18n="ci.phone">โทรศัพท์</div><div class="val">02-123-4567</div></div>
           </div>
           <div class="ci">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
-            <div><div class="lbl">LINE Official</div><div class="val">@tangjaitambunchee</div></div>
+            <div><div class="lbl" data-i18n="ci.line">LINE Official</div><div class="val">@tangjaitambunchee</div></div>
           </div>
           <div class="ci">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-            <div><div class="lbl">อีเมล</div><div class="val">hello@tangjaitambunchee.co.th</div></div>
+            <div><div class="lbl" data-i18n="ci.email">อีเมล</div><div class="val">hello@tangjaitambunchee.co.th</div></div>
           </div>
           <div class="ci">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><div class="lbl">ที่ตั้งสำนักงาน</div><div class="val">ถ.นิมมานเหมินท์ อ.เมืองเชียงใหม่ จ.เชียงใหม่ 50200</div></div>
+            <div><div class="lbl" data-i18n="ci.addr">ที่ตั้งสำนักงาน</div><div class="val" data-i18n="ci.addr.val">ถ.นิมมานเหมินท์ อ.เมืองเชียงใหม่ จ.เชียงใหม่ 50200</div></div>
           </div>
           <div class="ci">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><div class="lbl">เวลาทำการ</div><div class="val">จันทร์–ศุกร์ 09:00–18:00 น.</div></div>
+            <div><div class="lbl" data-i18n="ci.hours">เวลาทำการ</div><div class="val" data-i18n="ci.hours.val">จันทร์–ศุกร์ 09:00–18:00 น.</div></div>
           </div>
         </div>
       </div>
@@ -683,59 +692,59 @@
       <div class="contact-right reveal d1">
         <form class="form" id="contactForm" novalidate>
           <div class="form-body" id="formBody">
-            <h3>ขอคำปรึกษาฟรี</h3>
-            <p class="sub">กรอกข้อมูลเบื้องต้น แล้วเราจะติดต่อกลับโดยเร็วที่สุด</p>
+            <h3 data-i18n="form.h3">ขอคำปรึกษาฟรี</h3>
+            <p class="sub" data-i18n="form.sub">กรอกข้อมูลเบื้องต้น แล้วเราจะติดต่อกลับโดยเร็วที่สุด</p>
             <div class="field">
-              <label for="f-name">ชื่อ–นามสกุล <span style="color:#D9534F">*</span></label>
-              <input type="text" id="f-name" name="name" placeholder="เช่น สมชาย ใจดี">
-              <div class="msg">กรุณากรอกชื่อของคุณ</div>
+              <label for="f-name"><span data-i18n="form.name">ชื่อ–นามสกุล</span> <span style="color:#D9534F">*</span></label>
+              <input type="text" id="f-name" name="name" placeholder="เช่น สมชาย ใจดี" data-i18n-ph="form.name.ph">
+              <div class="msg" data-i18n="form.name.err">กรุณากรอกชื่อของคุณ</div>
             </div>
             <div class="form-row">
               <div class="field">
-                <label for="f-phone">เบอร์โทรศัพท์ <span style="color:#D9534F">*</span></label>
-                <input type="tel" id="f-phone" name="phone" placeholder="08X-XXX-XXXX" inputmode="tel">
-                <div class="msg">กรุณากรอกเบอร์โทร 9–10 หลัก</div>
+                <label for="f-phone"><span data-i18n="form.phone">เบอร์โทรศัพท์</span> <span style="color:#D9534F">*</span></label>
+                <input type="tel" id="f-phone" name="phone" placeholder="08X-XXX-XXXX" inputmode="tel" data-i18n-ph="form.phone.ph">
+                <div class="msg" data-i18n="form.phone.err">กรุณากรอกเบอร์โทร 9–10 หลัก</div>
               </div>
               <div class="field">
-                <label for="f-biz">ประเภทธุรกิจ</label>
+                <label for="f-biz" data-i18n="form.biz">ประเภทธุรกิจ</label>
                 <select id="f-biz" name="business">
-                  <option value="">เลือกประเภท</option>
-                  <option>ร้านอาหาร / คาเฟ่</option>
-                  <option>อีคอมเมิร์ซ / ออนไลน์</option>
-                  <option>รับเหมา / ก่อสร้าง</option>
-                  <option>นำเข้า–ส่งออก</option>
-                  <option>บริการ / ที่ปรึกษา</option>
-                  <option>โรงงาน / ผลิต</option>
-                  <option>อื่น ๆ</option>
+                  <option value="" data-i18n="biz.opt0">เลือกประเภท</option>
+                  <option data-i18n="biz.opt1">ร้านอาหาร / คาเฟ่</option>
+                  <option data-i18n="biz.opt2">อีคอมเมิร์ซ / ออนไลน์</option>
+                  <option data-i18n="biz.opt3">รับเหมา / ก่อสร้าง</option>
+                  <option data-i18n="biz.opt4">นำเข้า–ส่งออก</option>
+                  <option data-i18n="biz.opt5">บริการ / ที่ปรึกษา</option>
+                  <option data-i18n="biz.opt6">โรงงาน / ผลิต</option>
+                  <option data-i18n="biz.opt7">อื่น ๆ</option>
                 </select>
               </div>
             </div>
             <div class="field">
-              <label for="f-service">บริการที่สนใจ</label>
+              <label for="f-service" data-i18n="form.service">บริการที่สนใจ</label>
               <select id="f-service" name="service">
-                <option value="">เลือกบริการ</option>
-                <option>จดทะเบียนบริษัท</option>
-                <option>รับทำบัญชีรายเดือน</option>
-                <option>ปิดงบการเงินประจำปี</option>
-                <option>ยื่นภาษี</option>
-                <option>วางระบบ / ที่ปรึกษา</option>
-                <option>ยังไม่แน่ใจ ขอคำแนะนำ</option>
+                <option value="" data-i18n="svcopt0">เลือกบริการ</option>
+                <option data-i18n="svcopt1">จดทะเบียนบริษัท</option>
+                <option data-i18n="svcopt2">รับทำบัญชีรายเดือน</option>
+                <option data-i18n="svcopt3">ปิดงบการเงินประจำปี</option>
+                <option data-i18n="svcopt4">ยื่นภาษี</option>
+                <option data-i18n="svcopt5">วางระบบ / ที่ปรึกษา</option>
+                <option data-i18n="svcopt6">ยังไม่แน่ใจ ขอคำแนะนำ</option>
               </select>
             </div>
             <div class="field">
-              <label for="f-msg">รายละเอียดเพิ่มเติม</label>
-              <textarea id="f-msg" name="message" placeholder="เล่าเกี่ยวกับธุรกิจหรือสิ่งที่อยากปรึกษา (ถ้ามี)"></textarea>
+              <label for="f-msg" data-i18n="form.msg">รายละเอียดเพิ่มเติม</label>
+              <textarea id="f-msg" name="message" placeholder="เล่าเกี่ยวกับธุรกิจหรือสิ่งที่อยากปรึกษา (ถ้ามี)" data-i18n-ph="form.msg.ph"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">
-              ส่งข้อมูล ขอคำปรึกษาฟรี
+              <span data-i18n="form.submit">ส่งข้อมูล ขอคำปรึกษาฟรี</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             </button>
-            <p style="font-size:12.5px;color:var(--muted-2);text-align:center;margin-top:12px">เราเก็บข้อมูลของคุณเป็นความลับ และใช้เพื่อการติดต่อกลับเท่านั้น</p>
+            <p style="font-size:12.5px;color:var(--muted-2);text-align:center;margin-top:12px" data-i18n="form.privacy">เราเก็บข้อมูลของคุณเป็นความลับ และใช้เพื่อการติดต่อกลับเท่านั้น</p>
           </div>
           <div class="form-success" id="formSuccess">
             <div class="ok-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-            <h3>ได้รับข้อมูลแล้ว ขอบคุณค่ะ!</h3>
-            <p>ทีมงาน ตั้งใจทำบัญชี จะติดต่อกลับภายใน 1 วันทำการ</p>
+            <h3 data-i18n="form.success.h3">ได้รับข้อมูลแล้ว ขอบคุณค่ะ!</h3>
+            <p data-i18n="form.success.p">ทีมงาน ตั้งใจทำบัญชี จะติดต่อกลับภายใน 1 วันทำการ</p>
           </div>
         </form>
       </div>
@@ -749,7 +758,7 @@
     <div class="top">
       <div class="brand-col">
         <img src="assets/logo-dark.png" alt="ตั้งใจทำบัญชี">
-        <p>ห้างหุ้นส่วนจำกัด ตั้งใจทำบัญชี — สำนักงานบัญชีเชียงใหม่ที่ดูแลธุรกิจ SME ด้วยความตั้งใจในทุกตัวเลข ครบวงจรตั้งแต่จดทะเบียนจนถึงยื่นภาษี ให้บริการทั้งในเชียงใหม่และทั่วประเทศ</p>
+        <p data-i18n="footer.about">ห้างหุ้นส่วนจำกัด ตั้งใจทำบัญชี — สำนักงานบัญชีเชียงใหม่ที่ดูแลธุรกิจ SME ด้วยความตั้งใจในทุกตัวเลข ครบวงจรตั้งแต่จดทะเบียนจนถึงยื่นภาษี ให้บริการทั้งในเชียงใหม่และทั่วประเทศ</p>
         <div class="socials">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="#" aria-label="LINE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
@@ -757,43 +766,44 @@
         </div>
       </div>
       <div>
-        <h5>บริการ</h5>
+        <h5 data-i18n="footer.h.services">บริการ</h5>
         <ul>
-          <li><a href="#services">จดทะเบียนบริษัท</a></li>
-          <li><a href="#services">รับทำบัญชี</a></li>
-          <li><a href="#services">ปิดงบการเงิน</a></li>
-          <li><a href="#services">ยื่นภาษี</a></li>
-          <li><a href="#services">วางระบบ &amp; ที่ปรึกษา</a></li>
+          <li><a href="#services" data-i18n="fs1">จดทะเบียนบริษัท</a></li>
+          <li><a href="#services" data-i18n="fs2">รับทำบัญชี</a></li>
+          <li><a href="#services" data-i18n="fs3">ปิดงบการเงิน</a></li>
+          <li><a href="#services" data-i18n="fs4">ยื่นภาษี</a></li>
+          <li><a href="#services" data-i18n="fs5">วางระบบ &amp; ที่ปรึกษา</a></li>
         </ul>
       </div>
       <div>
-        <h5>บริษัท</h5>
+        <h5 data-i18n="footer.h.company">บริษัท</h5>
         <ul>
-          <li><a href="#why">ทำไมต้องเรา</a></li>
-          <li><a href="#process">ขั้นตอนการทำงาน</a></li>
-          <li><a href="#pricing">แพ็กเกจราคา</a></li>
-          <li><a href="#reviews">รีวิวลูกค้า</a></li>
-          <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+          <li><a href="#why" data-i18n="fc1">ทำไมต้องเรา</a></li>
+          <li><a href="#process" data-i18n="fc2">ขั้นตอนการทำงาน</a></li>
+          <li><a href="#pricing" data-i18n="fc3">แพ็กเกจราคา</a></li>
+          <li><a href="#reviews" data-i18n="fc4">รีวิวลูกค้า</a></li>
+          <li><a href="#faq" data-i18n="fc5">คำถามที่พบบ่อย</a></li>
         </ul>
       </div>
       <div>
-        <h5>ติดต่อ</h5>
+        <h5 data-i18n="footer.h.contact">ติดต่อ</h5>
         <ul>
           <li><a href="tel:021234567">02-123-4567</a></li>
           <li><a href="#contact">@tangjaitambunchee</a></li>
           <li><a href="#contact">hello@tangjaitambunchee.co.th</a></li>
-          <li>ถ.นิมมานเหมินท์ อ.เมืองเชียงใหม่ 50200</li>
-          <li>จันทร์–ศุกร์ 09:00–18:00</li>
+          <li data-i18n="fcon4">ถ.นิมมานเหมินท์ อ.เมืองเชียงใหม่ 50200</li>
+          <li data-i18n="fcon5">จันทร์–ศุกร์ 09:00–18:00</li>
         </ul>
       </div>
     </div>
     <div class="bottom">
-      <span>© 2569 ห้างหุ้นส่วนจำกัด ตั้งใจทำบัญชี · TANG JAI TAM BUNCHEE LIMITED PARTNERSHIP</span>
-      <span><a href="#">นโยบายความเป็นส่วนตัว</a> · <a href="#">เงื่อนไขการให้บริการ</a></span>
+      <span data-i18n="footer.copy">© 2569 ห้างหุ้นส่วนจำกัด ตั้งใจทำบัญชี · TANG JAI TAM BUNCHEE LIMITED PARTNERSHIP</span>
+      <span data-i18n="footer.legal"><a href="#">นโยบายความเป็นส่วนตัว</a> · <a href="#">เงื่อนไขการให้บริการ</a></span>
     </div>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

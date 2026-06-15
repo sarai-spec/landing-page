@@ -111,6 +111,13 @@ section{scroll-margin-top:84px}
 .menu-toggle{display:none;width:44px;height:44px;border:1px solid var(--line-2);border-radius:12px;background:#fff;cursor:pointer;align-items:center;justify-content:center}
 .menu-toggle svg{width:22px;height:22px}
 
+/* language switch */
+.lang-switch{display:inline-flex;background:var(--surface-2);border:1px solid var(--line);border-radius:100px;padding:3px;flex:none}
+.lang-switch button{border:none;background:none;font-family:var(--font-body);font-weight:700;font-size:13px;color:var(--muted);padding:6px 12px;border-radius:100px;cursor:pointer;transition:color .2s, background .2s, box-shadow .2s;letter-spacing:.02em}
+.lang-switch button.active{background:#fff;color:var(--green-800);box-shadow:var(--shadow-sm)}
+.lang-switch button:not(.active):hover{color:var(--ink)}
+.drawer .panel .lang-switch{margin-top:20px;align-self:flex-start}
+
 /* mobile drawer */
 .drawer{position:fixed;inset:0;z-index:70;visibility:hidden;pointer-events:none}
 .drawer .scrim{position:absolute;inset:0;background:rgba(20,24,14,.4);opacity:0;transition:opacity .3s}

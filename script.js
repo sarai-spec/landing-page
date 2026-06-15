@@ -30,27 +30,32 @@
     reveals.forEach(r => r.classList.add('in'));
   }
 
-  /* Count-up stats */
+  /* Count-up stats (language-aware suffix) */
+  const counters = document.querySelectorAll('[data-count]');
+  const suffixFor = (el) => (window.appLang === 'en' && el.getAttribute('data-suffix-en') != null)
+    ? el.getAttribute('data-suffix-en')
+    : (el.getAttribute('data-suffix') || '');
+  function renderCount(el){
+    el.textContent = Math.round(parseFloat(el.getAttribute('data-count'))).toLocaleString('en-US') + suffixFor(el);
+  }
   function animateCount(el){
     const target = parseFloat(el.getAttribute('data-count'));
-    const suffix = el.getAttribute('data-suffix') || '';
     const dur = 1400; const start = performance.now();
     function tick(now){
       const p = Math.min((now - start) / dur, 1);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased).toLocaleString('th-TH') + suffix;
-      if(p < 1) requestAnimationFrame(tick);
+      el.textContent = Math.round(target * eased).toLocaleString('en-US') + suffixFor(el);
+      if(p < 1) requestAnimationFrame(tick); else el.dataset.done = '1';
     }
     requestAnimationFrame(tick);
   }
-  const counters = document.querySelectorAll('[data-count]');
   if('IntersectionObserver' in window){
     const cio = new IntersectionObserver((entries) => {
       entries.forEach(en => { if(en.isIntersecting){ animateCount(en.target); cio.unobserve(en.target); } });
     }, {threshold:0.6});
     counters.forEach(c => cio.observe(c));
   } else {
-    counters.forEach(c => { c.textContent = c.getAttribute('data-count') + (c.getAttribute('data-suffix')||''); });
+    counters.forEach(c => { c.dataset.done = '1'; renderCount(c); });
   }
 
   /* Hero progress bar grow on load */
@@ -113,24 +118,41 @@
     update();
   })();
 
-  /* Pricing toggle */
+  /* Pricing toggle (language-aware period suffix & notes) */
   const tg = document.getElementById('priceTg');
-  if(tg){
-    const buttons = tg.querySelectorAll('button');
-    const setPeriod = (period) => {
-      tg.classList.toggle('year', period === 'year');
-      buttons.forEach(b => b.classList.toggle('active', b.dataset.period === period));
-      document.querySelectorAll('.plan').forEach(plan => {
-        const amt = plan.querySelector('.amt');
-        const per = plan.querySelector('.per');
-        const note = plan.querySelector('.pnote');
-        if(amt){ amt.textContent = amt.getAttribute('data-' + period); }
-        if(per){ per.textContent = period === 'year' ? '/ ปี' : '/ เดือน'; }
-        if(note){ note.textContent = note.getAttribute('data-note-' + period); }
-      });
-    };
-    buttons.forEach(b => b.addEventListener('click', () => setPeriod(b.dataset.period)));
+  let currentPeriod = 'month';
+  const PER = { month: { th: '/ เดือน', en: '/ mo' }, year: { th: '/ ปี', en: '/ yr' } };
+  function applyPricing(){
+    if(!tg) return;
+    const period = currentPeriod;
+    const en = window.appLang === 'en';
+    tg.classList.toggle('year', period === 'year');
+    tg.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.period === period));
+    document.querySelectorAll('.plan').forEach(plan => {
+      const amt = plan.querySelector('.amt');
+      const per = plan.querySelector('.per');
+      const note = plan.querySelector('.pnote');
+      if(amt) amt.textContent = amt.getAttribute('data-' + period);
+      if(per) per.textContent = en ? PER[period].en : PER[period].th;
+      if(note){
+        const enNote = note.getAttribute('data-note-' + period + '-en');
+        note.textContent = (en && enNote != null) ? enNote : note.getAttribute('data-note-' + period);
+      }
+    });
   }
+  if(tg){
+    tg.querySelectorAll('button').forEach(b =>
+      b.addEventListener('click', () => { currentPeriod = b.dataset.period; applyPricing(); }));
+    applyPricing();
+  }
+
+  /* React to language changes from i18n.js */
+  document.addEventListener('langchange', () => {
+    applyPricing();
+    counters.forEach(c => { if(c.dataset.done) renderCount(c); });
+    const openFaq = document.querySelector('.faq.open .a');
+    if(openFaq) openFaq.style.maxHeight = openFaq.scrollHeight + 'px';
+  });
 
   /* Contact form validation */
   const form = document.getElementById('contactForm');
