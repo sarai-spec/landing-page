@@ -137,6 +137,7 @@ section{scroll-margin-top:84px}
 .hero::after{content:"";position:absolute;bottom:-120px;left:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at center, rgba(123,197,58,.12), rgba(123,197,58,0) 70%);z-index:0}
 .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hero h1{font-size:clamp(36px,5.2vw,62px);line-height:1.08}
+html[lang="th"] .hero h1{line-height:1.2}
 .hero h1 .hl{color:var(--green-700);position:relative;white-space:nowrap}
 .hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.18em;background:var(--green-200);z-index:-1;border-radius:3px}
 .hero p.lede{font-size:19px;color:var(--ink-2);margin:22px 0 30px;max-width:560px}
