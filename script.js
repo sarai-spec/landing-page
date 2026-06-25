@@ -170,13 +170,34 @@
       setErr(f, !ok);
       return ok;
     }
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxrW36EaEoQDBEObmBKkFWONylt2A3ZUEET7jbxZzBH8dqP_7iHCQneW0aJUV2OV3s8/exec';
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const okName = validateField(name);
       const okPhone = validateField(phone);
       if(okName && okPhone){
-        document.getElementById('formBody').style.display = 'none';
-        document.getElementById('formSuccess').classList.add('show');
+        const submitBtn = form.querySelector('[type="submit"]');
+        if(submitBtn) submitBtn.disabled = true;
+
+        const payload = {
+          name: name.value.trim(),
+          phone: form.querySelector('#f-phone').value.trim(),
+          business: (form.querySelector('#f-biz') || {value:''}).value,
+          service: (form.querySelector('#f-service') || {value:''}).value,
+          message: (form.querySelector('#f-msg') || {value:''}).value.trim()
+        };
+
+        fetch(SHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        })
+        .finally(() => {
+          document.getElementById('formBody').style.display = 'none';
+          document.getElementById('formSuccess').classList.add('show');
+        });
       } else {
         const firstErr = form.querySelector('.field.err input');
         if(firstErr) firstErr.focus();
