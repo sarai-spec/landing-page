@@ -206,11 +206,8 @@
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(payload)
           }),
-          fetch('https://script.google.com/macros/s/AKfycbxrW36EaEoQDBEObmBKkFWONylt2A3ZUEET7jbxZzBH8dqP_7iHCQneW0aJUV2OV3s8/exec', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {'Content-Type': 'text/plain'},
-            body: JSON.stringify(sheetPayload)
+          fetch('https://script.google.com/macros/s/AKfycbxrW36EaEoQDBEObmBKkFWONylt2A3ZUEET7jbxZzBH8dqP_7iHCQneW0aJUV2OV3s8/exec?' + new URLSearchParams(sheetPayload).toString(), {
+            mode: 'no-cors'
           })
         ]).finally(() => {
           document.getElementById('formBody').style.display = 'none';
