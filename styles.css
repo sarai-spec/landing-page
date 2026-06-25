@@ -1,4 +1,8 @@
 /* ===== ตั้งใจทำบัญชี — Design System ===== */
+/* Feather icons base */
+[data-feather]{width:24px;height:24px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle}
+/* Stars — filled */
+.stars [data-feather]{width:18px;height:18px;fill:currentColor;stroke:currentColor}
 :root{
   /* Brand greens (from logo #88CA47) */
   --green:#88CA47;
@@ -183,7 +187,7 @@ html[lang="th"] .hero h1{line-height:1.2}
 
 /* ===== Trust strip ===== */
 .trust{padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.trust .wrap{display:flex;align-items:center;gap:34px;flex-wrap:wrap;justify-content:center}
+.trust .wrap{display:flex;flex-direction:column;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
 .trust .lbl{font-size:14px;color:var(--muted);font-weight:500}
 .trust .logos{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:center}
 .trust .logos .cl{font-family:var(--font-head);font-weight:700;font-size:20px;color:var(--muted-2);letter-spacing:.01em;opacity:.85}
@@ -308,10 +312,10 @@ html[lang="th"] .hero h1{line-height:1.2}
 
 /* ===== Testimonials ===== */
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.tcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm)}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);align-self:start}
 .tcard .stars{display:flex;gap:3px;margin-bottom:14px;color:var(--green-bright)}
 .tcard .stars svg{width:18px;height:18px}
-.tcard .quote{font-size:16px;color:var(--ink-2);line-height:1.6;flex:1}
+.tcard .quote{font-size:16px;color:var(--ink-2);line-height:1.6}
 .tcard .who{display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
 .tcard .av{width:46px;height:46px;border-radius:50%;background:var(--green-100);color:var(--green-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;font-size:18px;flex:none}
 .tcard .who .nm{font-weight:600;font-size:15px}

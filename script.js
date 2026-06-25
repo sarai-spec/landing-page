@@ -132,9 +132,9 @@
       const amt = plan.querySelector('.amt');
       const per = plan.querySelector('.per');
       const note = plan.querySelector('.pnote');
-      if(amt) amt.textContent = amt.getAttribute('data-' + period);
-      if(per) per.textContent = en ? PER[period].en : PER[period].th;
-      if(note){
+      if(amt && amt.getAttribute('data-' + period)) amt.textContent = amt.getAttribute('data-' + period);
+      if(per && per.getAttribute('data-' + period) !== null) per.textContent = en ? PER[period].en : PER[period].th;
+      if(note && note.getAttribute('data-note-' + period)){
         const enNote = note.getAttribute('data-note-' + period + '-en');
         note.textContent = (en && enNote != null) ? enNote : note.getAttribute('data-note-' + period);
       }
