@@ -170,8 +170,6 @@
       setErr(f, !ok);
       return ok;
     }
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxrW36EaEoQDBEObmBKkFWONylt2A3ZUEET7jbxZzBH8dqP_7iHCQneW0aJUV2OV3s8/exec';
-
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const okName = validateField(name);
@@ -180,18 +178,24 @@
         const submitBtn = form.querySelector('[type="submit"]');
         if(submitBtn) submitBtn.disabled = true;
 
+        const biz = (form.querySelector('#f-biz') || {value:''}).value;
+        const svc = (form.querySelector('#f-service') || {value:''}).value;
+        const msg = (form.querySelector('#f-msg') || {value:''}).value.trim();
+
         const payload = {
+          access_key: '7ab29967-a4be-4442-bc78-0a9e6c72dd04',
+          subject: 'ติดต่อใหม่จากเว็บไซต์ — ' + name.value.trim(),
+          from_name: 'ตั้งใจทำบัญชี',
           name: name.value.trim(),
           phone: form.querySelector('#f-phone').value.trim(),
-          business: (form.querySelector('#f-biz') || {value:''}).value,
-          service: (form.querySelector('#f-service') || {value:''}).value,
-          message: (form.querySelector('#f-msg') || {value:''}).value.trim()
+          business: biz,
+          service: svc,
+          message: msg || '-'
         };
 
-        fetch(SHEET_URL, {
+        fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          mode: 'no-cors',
-          headers: {'Content-Type': 'text/plain'},
+          headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(payload)
         })
         .finally(() => {
