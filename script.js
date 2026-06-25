@@ -193,12 +193,26 @@
           message: msg || '-'
         };
 
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(payload)
-        })
-        .finally(() => {
+        const sheetPayload = {
+          name: payload.name,
+          phone: payload.phone,
+          business: payload.business,
+          service: payload.service,
+          message: payload.message
+        };
+        Promise.allSettled([
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(payload)
+          }),
+          fetch('https://script.google.com/macros/s/AKfycbxrW36EaEoQDBEObmBKkFWONylt2A3ZUEET7jbxZzBH8dqP_7iHCQneW0aJUV2OV3s8/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {'Content-Type': 'text/plain'},
+            body: JSON.stringify(sheetPayload)
+          })
+        ]).finally(() => {
           document.getElementById('formBody').style.display = 'none';
           document.getElementById('formSuccess').classList.add('show');
         });
