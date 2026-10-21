@@ -466,3 +466,14 @@ html[lang="th"] .hero h1{line-height:1.2}
   .brand img{height:38px}
   .eyebrow{font-size:13px}
 }
+
+/* Cookie consent banner (consent.js): small card bottom-left, full width on phones */
+.cookie{position:fixed;left:20px;bottom:20px;z-index:200;max-width:400px;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);opacity:0;translate:0 12px;transition:opacity .25s ease,translate .25s ease}
+.cookie.in{opacity:1;translate:0 0}
+.cookie p{font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:0 0 14px}
+.cookie-acts{display:flex;gap:8px;justify-content:flex-end}
+.cookie-acts .btn{padding:10px 18px;font-size:14.5px}
+.cookie-link{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.cookie-link:hover{color:var(--green-bright)}
+@media (max-width:640px){.cookie{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));max-width:none}.cookie-acts .btn{flex:1}}
+@media (prefers-reduced-motion:reduce){.cookie{transition:none}}

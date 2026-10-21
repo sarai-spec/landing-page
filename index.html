@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XQ6BK5133"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2: analytics cookies only after the visitor accepts (consent.js); no ad storage at all
+  var tjConsent = null; try { tjConsent = localStorage.getItem('tj-consent'); } catch (e) {}
+  gtag('consent', 'default', { analytics_storage: tjConsent === 'granted' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
+  gtag('js', new Date());
+
+  gtag('config', 'G-1XQ6BK5133');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>รับทำบัญชีเชียงใหม่ | ตั้งใจทำบัญชี สำนักงานบัญชีครบวงจร จดทะเบียน–ยื่นภาษี</title>
@@ -1060,8 +1072,10 @@
   </div>
 </footer>
 
+<script src="analytics.js"></script>
 <script src="i18n.js"></script>
 <script src="script.js"></script>
+<script src="consent.js"></script>
 <script>feather.replace({'stroke-width': 2});</script>
 </body>
 </html>
