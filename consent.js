@@ -4,8 +4,8 @@
 (function(){
   const KEY = 'tj-consent';
   const T = {
-    th: { text: 'เราใช้คุกกี้เพื่อดูว่าคนใช้เว็บนี้อย่างไร แล้วนำไปปรับเว็บให้ดีขึ้น ไม่ใช้ยิงโฆษณา และไม่ขายข้อมูลของคุณ', yes: 'ยอมรับ', no: 'ไม่ยอมรับ', label: 'การใช้คุกกี้', settings: 'ตั้งค่าคุกกี้' },
-    en: { text: 'We use cookies to see how people use this site, so we can make it better. No ads, no selling your data.', yes: 'Accept', no: 'Decline', label: 'Cookie consent', settings: 'Cookie settings' }
+    th: { text: 'เราใช้คุกกี้เพื่อดูว่าคนใช้เว็บนี้อย่างไร แล้วนำไปปรับเว็บให้ดีขึ้น ไม่ใช้ยิงโฆษณา และไม่ขายข้อมูลของคุณ', yes: 'ยอมรับ', no: 'ไม่ยอมรับ', label: 'การใช้คุกกี้', settings: 'ตั้งค่าคุกกี้', policy: 'อ่านนโยบาย' },
+    en: { text: 'We use cookies to see how people use this site, so we can make it better. No ads, no selling your data.', yes: 'Accept', no: 'Decline', label: 'Cookie consent', settings: 'Cookie settings', policy: 'Read the policy' }
   };
   const read = () => { try { return localStorage.getItem(KEY); } catch(e){ return null; } };
   const save = v => { try { localStorage.setItem(KEY, v); } catch(e){} };
@@ -25,7 +25,7 @@
   const render = () => {
     const L = T[document.documentElement.lang === 'en' ? 'en' : 'th'];
     box.setAttribute('aria-label', L.label);
-    box.querySelector('p').textContent = L.text;
+    box.querySelector('p').innerHTML = L.text + ' <a href="privacy.html">' + L.policy + '</a>';
     box.querySelector('[data-c="denied"]').textContent = L.no;
     box.querySelector('[data-c="granted"]').textContent = L.yes;
     link.textContent = L.settings;

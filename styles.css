@@ -477,3 +477,4 @@ html[lang="th"] .hero h1{line-height:1.2}
 .cookie-link:hover{color:var(--green-bright)}
 @media (max-width:640px){.cookie{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));max-width:none}.cookie-acts .btn{flex:1}}
 @media (prefers-reduced-motion:reduce){.cookie{transition:none}}
+.cookie p a{color:var(--green-800);text-decoration:underline;text-underline-offset:3px}

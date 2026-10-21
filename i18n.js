@@ -281,7 +281,7 @@
     "fcon4": `Nimmanhaemin Rd., Mueang Chiang Mai 50200`,
     "fcon5": `Mon–Fri 09:00–17:30`,
     "footer.copy": `© 2026 Tang Jai Tam Bunchee Limited Partnership · TANG JAI TAM BUNCHEE LIMITED PARTNERSHIP`,
-    "footer.legal": `<a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>`
+    "footer.legal": `<a href="privacy.html">Privacy Policy</a> · <a href="#">Terms of Service</a>`
   };
 
   // ----- engine -----
