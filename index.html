@@ -709,26 +709,12 @@
 
     <!-- Tab: บริการอื่นๆ -->
     <div class="ptab-panel" id="tab-other">
-      <div class="plans">
-        <div class="plan reveal">
-          <div class="pname">ประกันสังคม &amp; Payroll</div>
-          <div class="pdesc">จัดการงานบุคคลด้านเอกสารราชการ</div>
-          <div class="pstart">เริ่มต้นเพียง</div>
-          <div class="pprice"><span class="cur">฿</span><span class="amt">500</span><span class="per">/ เดือน</span></div>
-          <div class="pnote">ต่อ 1–5 พนักงาน</div>
-          <ul class="pfeats">
-            <li><i data-feather="check"></i> ยื่นแบบและนำส่งเงินสมทบ</li>
-            <li><i data-feather="check"></i> จัดทำสลิปเงินเดือน (Payroll)</li>
-            <li><i data-feather="check"></i> ขึ้นทะเบียนนายจ้าง–ลูกจ้าง</li>
-            <li><i data-feather="check"></i> หนังสือรับรองเงินเดือน</li>
-          </ul>
-          <a href="#contact" class="btn btn-ghost btn-block">ขอใบเสนอราคา</a>
-        </div>
-        <div class="plan featured reveal d1">
+      <div class="plans plans-2">
+        <div class="plan featured reveal">
           <div class="pname">วางระบบบัญชี</div>
           <div class="pdesc">วางรากฐานบัญชีและเอกสารให้ธุรกิจ</div>
           <div class="pstart">เริ่มต้นเพียง</div>
-          <div class="pprice"><span class="cur">฿</span><span class="amt">5,000</span><span class="per">/ ครั้ง</span></div>
+          <div class="pprice"><span class="cur">฿</span><span class="amt">25,000</span><span class="per">/ ครั้ง</span></div>
           <div class="pnote">ออกแบบระบบเฉพาะธุรกิจของคุณ</div>
           <ul class="pfeats">
             <li><i data-feather="check"></i> ออกแบบผังบัญชีเฉพาะธุรกิจ</li>
@@ -739,7 +725,7 @@
           </ul>
           <a href="#contact" class="btn btn-primary btn-block">ขอใบเสนอราคา</a>
         </div>
-        <div class="plan reveal d2">
+        <div class="plan reveal d1">
           <div class="pname">ที่ปรึกษาภาษีเฉพาะครั้ง</div>
           <div class="pdesc">ให้คำปรึกษาเรื่องภาษีและบัญชีเฉพาะเรื่อง</div>
           <div class="pstart">เริ่มต้นเพียง</div>
@@ -767,6 +753,7 @@
 .ptab.active { background:var(--green-700,#4A7C34); border-color:var(--green-700,#4A7C34); color:#fff; }
 .ptab-panel { display:none; }
 .ptab-panel.active { display:block; }
+@media (min-width:1001px){ .plans.plans-2 { grid-template-columns:repeat(2,minmax(0,380px)); justify-content:center; } }
 </style>
 <script>
 (function(){
