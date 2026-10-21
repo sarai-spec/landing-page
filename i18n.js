@@ -277,6 +277,7 @@
     "fc3": `Pricing`,
     "fc4": `Customer reviews`,
     "fc5": `FAQ`,
+    "fc6": `Tangjai Design: websites and graphics`,
     "footer.h.contact": `Contact`,
     "fcon4": `Nimmanhaemin Rd., Mueang Chiang Mai 50200`,
     "fcon5": `Mon–Fri 09:00–17:30`,
