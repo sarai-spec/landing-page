@@ -230,7 +230,7 @@
     "ci.addr": `Office Location`,
     "ci.addr.val": `Nimmanhaemin Rd., Mueang Chiang Mai, Chiang Mai 50200`,
     "ci.hours": `Business Hours`,
-    "ci.hours.val": `Mon–Fri 09:00–18:00`,
+    "ci.hours.val": `Mon–Fri 09:00–17:30`,
     "form.h3": `Request a Free Consultation`,
     "form.sub": `Fill in a few basics and we'll get back to you as soon as possible.`,
     "form.name": `Full Name`,
@@ -279,7 +279,7 @@
     "fc5": `FAQ`,
     "footer.h.contact": `Contact`,
     "fcon4": `Nimmanhaemin Rd., Mueang Chiang Mai 50200`,
-    "fcon5": `Mon–Fri 09:00–18:00`,
+    "fcon5": `Mon–Fri 09:00–17:30`,
     "footer.copy": `© 2026 Tang Jai Tam Bunchee Limited Partnership · TANG JAI TAM BUNCHEE LIMITED PARTNERSHIP`,
     "footer.legal": `<a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>`
   };
