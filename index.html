@@ -119,9 +119,12 @@
   ]
 }
 </script>
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -411,7 +414,7 @@
       <!-- การ์ดที่ 1 -->
       <div class="cred reveal" style="width:280px;">
         <div class="slot">
-          <img src="assets/cert-of-regist.png" alt="ใบสำคัญแสดงการจดทะเบียนห้างหุ้นส่วนบริษัท ตั้งใจทำบัญชี" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+          <img src="assets/cert-of-regist.png" alt="ใบสำคัญแสดงการจดทะเบียนห้างหุ้นส่วนบริษัท ตั้งใจทำบัญชี" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-xs);">
         </div>
         <div class="cred-label">
           <div class="nm"><i data-feather="check"></i> <span data-i18n="cred3.nm">จดทะเบียนนิติบุคคล</span></div>
@@ -956,13 +959,13 @@
             <h3 data-i18n="form.h3">ขอคำปรึกษาฟรี</h3>
             <p class="sub" data-i18n="form.sub">กรอกข้อมูลเบื้องต้น แล้วเราจะติดต่อกลับโดยเร็วที่สุด</p>
             <div class="field">
-              <label for="f-name"><span data-i18n="form.name">ชื่อ–นามสกุล</span> <span style="color:#D9534F">*</span></label>
+              <label for="f-name"><span data-i18n="form.name">ชื่อ–นามสกุล</span> <span class="req">*</span></label>
               <input type="text" id="f-name" name="name" placeholder="เช่น สมชาย ใจดี" data-i18n-ph="form.name.ph">
               <div class="msg" data-i18n="form.name.err">กรุณากรอกชื่อของคุณ</div>
             </div>
             <div class="form-row">
               <div class="field">
-                <label for="f-phone"><span data-i18n="form.phone">เบอร์โทรศัพท์</span> <span style="color:#D9534F">*</span></label>
+                <label for="f-phone"><span data-i18n="form.phone">เบอร์โทรศัพท์</span> <span class="req">*</span></label>
                 <input type="tel" id="f-phone" name="phone" placeholder="08X-XXX-XXXX" inputmode="tel" data-i18n-ph="form.phone.ph">
                 <div class="msg" data-i18n="form.phone.err">กรุณากรอกเบอร์โทร 9–10 หลัก</div>
               </div>
