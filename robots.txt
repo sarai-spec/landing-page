@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /quote.html
+
+Sitemap: https://tangjaitam.com/sitemap.xml
